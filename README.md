@@ -50,7 +50,7 @@ Please follow the steps below to setup the Bill payment application(API) on your
 - Start your Wamp / Mamp server
 - Go back to VSCode terminal and run this command (Just press enter if it ask any question)  -     php artisan migrate
 - Next run this command (press enter if for any question asked)  -     php artisan passport:client --personal 
-- Next start your server at port 8000 by running this command in the terminal as well - php artisan serve ;
+- Next start your server at port 8000 by running this command in the terminal as well - php artisan serve 
 
 - You can now start testing the api
 
@@ -130,7 +130,7 @@ min(), letters(), mixedCase(), symbols(), uncompromised()
 - Implemented a lock service to concurrency attacks
 
 ##
-################################
+################################################################################################
 ##
 I look forward to hearing from you 😊
 
