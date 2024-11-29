@@ -202,7 +202,7 @@
 					]
 				},
 				{
-					"name": "Login as User",
+					"name": "Login",
 					"event": [
 						{
 							"listen": "test",
