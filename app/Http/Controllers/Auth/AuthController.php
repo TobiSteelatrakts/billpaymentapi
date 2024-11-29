@@ -16,9 +16,9 @@ class AuthController extends Controller
 {
 
 
-    public function signup(Request $request, Faker $faker)
+    // create a new user and a wallet for the user
+    public function create(Request $request, Faker $faker)
     {
-
 
         // Input validation
         $request->validate([

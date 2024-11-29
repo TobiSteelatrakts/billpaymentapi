@@ -14,7 +14,7 @@ class BillPaymentTest extends TestCase
 
         // create a new user
         $response = $this
-        ->json('POST', '/api/auth/signup', [
+        ->json('POST', '/api/auth/create', [
             "name" => "Tobex",
             "email" => "tobex@gmail.com",
             "phone_number" => "08178273632",

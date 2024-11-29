@@ -52,7 +52,7 @@ Each api endpoint has a sample request, a success request and a failed request
  
 - After importing the api-docs.json collection you can test the following endpoints
 
-- User SignUp (Create User): http://127.0.0.1:8000/api/auth/signup         POST request    - (Creates a new user and  a wallet instantly )
+- User Create (Create User): http://127.0.0.1:8000/api/auth/create         POST request    - (Creates a new user and  a wallet instantly )
 - User Login: http://127.0.0.1:8000/api/auth/login        POST request   -  (After successful login, make sure to use the access_token generated for the remaining requests below) just add Authorization:  Bearer + access_token in the request headers in Postman
 - Wallet Balance :     http://127.0.0.1:8000/api/wallet/balance         GET request
 - Funt Wallet :      http://127.0.0.1:8000/api/wallet/fund         POST request
@@ -107,7 +107,7 @@ I used the feature test since it is more robust
 - Passowrd hashing to ensure all passwords are not readable as plain text
 - Validation checks to ensure a strong password is created by the user using some built in Laravel validation such as
 min(), letters(), mixedCase(), symbols(), uncompromised() 
- 
+
 - I used laravel hitten attribute in user modal to hide Password in response
 - Used UUID for ID field in the database to enure that IDs are uniqure and also not prone to collisions
 - Used and created custom validation rules to better validate user inputs

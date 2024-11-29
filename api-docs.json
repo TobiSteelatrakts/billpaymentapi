@@ -46,7 +46,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"name\": \"Tobex\",\n    \"email\": \"tobex@gmail.com\",\n    \"phone_number\": \"08178273633\",\n    \"password\" : \"#Encrypt@password#\"\n}",
+							"raw": "{\n   \"name\": \"Tobexx22\",\n    \"email\": \"tobexxxxss@gmail.com\",\n    \"phone_number\": \"08258273633\",\n    \"password\" : \"#Encrypt@password#\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -54,7 +54,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/signup",
+							"raw": "http://127.0.0.1:8001/api/auth/create",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -62,11 +62,11 @@
 								"0",
 								"1"
 							],
-							"port": "8000",
+							"port": "8001",
 							"path": [
 								"api",
 								"auth",
-								"signup"
+								"create"
 							]
 						},
 						"description": "Gets information about the authenticated user."
@@ -95,7 +95,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"Tobex\",\n    \"email\": \"tobex@gmail.com\",\n    \"phone_number\": \"08178273632\",\n    \"password\" : \"Encrypt#password\"\n}",
+									"raw": "{\n   \"name\": \"Tobex\",\n    \"email\": \"tobex@gmail.com\",\n    \"phone_number\": \"08178273633\",\n    \"password\" : \"#Encrypt@password#\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -103,7 +103,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/auth/signup",
+									"raw": "http://127.0.0.1:8000/api/auth/create",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -115,7 +115,7 @@
 									"path": [
 										"api",
 										"auth",
-										"signup"
+										"create"
 									]
 								}
 							},
@@ -167,7 +167,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/auth/signup",
+									"raw": "http://127.0.0.1:8000/api/auth/create",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -179,7 +179,7 @@
 									"path": [
 										"api",
 										"auth",
-										"signup"
+										"create"
 									]
 								}
 							},
