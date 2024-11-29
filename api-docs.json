@@ -46,7 +46,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"name\": \"Tobexx22\",\n    \"email\": \"tobexxxxss@gmail.com\",\n    \"phone_number\": \"08258273633\",\n    \"password\" : \"#Encrypt@password#\"\n}",
+							"raw": "{\n   \"name\": \"Tobex\",\n    \"email\": \"tobex@gmail.com\",\n    \"phone_number\": \"08258273633\",\n    \"password\" : \"#Encrypt@password#\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -54,7 +54,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8001/api/auth/create",
+							"raw": "http://127.0.0.1:8000/api/auth/create",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -62,7 +62,7 @@
 								"0",
 								"1"
 							],
-							"port": "8001",
+							"port": "8000",
 							"path": [
 								"api",
 								"auth",
@@ -802,7 +802,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZDk5NWMyYS1kZjgwLTRkZjctYjZhNS00NzUwYmI5MDE5MzAiLCJqdGkiOiJhY2E3Y2E3MzIyNTUzNTM2NjgzYjgwYmUyYThjYzU1ZTM0ODdhYjliMGEyOWU2N2RlOTNjYjZjYWVlMzk4OGEyZDNmZDI5ZTZiNzRiYWI0YiIsImlhdCI6MTczMjgzNzgzOC4yNzQwODEsIm5iZiI6MTczMjgzNzgzOC4yNzQwODIsImV4cCI6MTczMjgzODQwMC4yOTk4NDcsInN1YiI6ImE5ZDE2MDdjLWI1YmEtMzI1OC04MmM4LWI0MzU5M2NjMzU2ZCIsInNjb3BlcyI6W119.BD6iSQk5NPllE4jEJEzsNOhFwaamfevptma3rwYtzpUhhiDlBria5Kvad392IB-H4z1PtJRHqlc3l5yNnw511Ae39T9pD0yZPIDKHZ77S85It6xr__MjYsVqdSwlxZFEon5vM8SdCevhdf3FtQ13ghptBV2Nrht0wDXmmBcHnvABTdx9jdxiZcTk8-k6ih5f_aWOH4rY9WGvdxx7hiOX3__ObgI2n0eDgLcoRc_vggNESw8kh980dIYo1Wr56qmmavAtWevuj0ysBDZDILxaB1Z13uSBJ5Y8pS2BHlwrEaDYNJzMwCWJUFl2arKqA1iMtdF7cvMtxL7-dC96qlp_qusZ6To4ssVDJqKQdxMFh7pH60JptLolucTgP4S0vrBONV13RXotzkfB6BiajA872OSNghzjt7WBL3QNdcUPF5yM6pc74DhPpeVB2DIz50SMycpoEHNcu240VF2YMHlRKaYy-U3BRVbNLrX2U1dTBjjnk4jS8cpia5oxk20n7O_eWBbn0HqPsKxxLQxevpx5BzakJuTmUzanekTAkRuSyq9UI1IEMii8uH2iFsSGBXsbHuqE5RJrRaVrON09l6YkVHKoLoSf4d0z65uOdUJ9LKpemh_1adP0eqXX7204YrDy0tmZSrtDqrU8Wip7ocpFGDopqbwXg3fJ-TJsMsJMQB8",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZDlhMDE1NS1iMDUyLTRkZjYtYjBiZC04NDMxZTMwOTM2YjgiLCJqdGkiOiI5NTBhNjQxMzA3M2VjYmNlYzgwOTM0Yzc1YjEwMWU2MjkzY2Y2ODYwOTg0NmMzMGUwMzUxN2VhOTMxMDRlMTg0ODhmMzlmOTlhNzM3YTA2MCIsImlhdCI6MTczMjg1NDI3MC4wMjAyNzgsIm5iZiI6MTczMjg1NDI3MC4wMjAyNzksImV4cCI6MTczMjkyNDgwMC4wNDcxODgsInN1YiI6ImQ1NzkyNTMxLTkwYzQtM2M0NS05NzBkLWUyZDg4ZWNjOTg5ZSIsInNjb3BlcyI6W119.U25wnZJE_jwSLqlZEIBGKcJ8f2MLNZMDui038XPdEh3lJqa9xs6ixFxwunJTOBj8RfaoA3r078JFiaQR1JAHZc8dzPIbqdfgF2qMTrisH9Kpb8ku2JnaHahuIFMt_YxWSsVBAy_K6EqjkJ1qvJhj9kVphKjo-z2rEfljZat7pKV-6sa7xseUdnIcyLDFQJB002Dx0bDe2CAnxmU6Wr-BjiPPSB1BvI4m_cKYLIwekYwGgQxddFGSMB-g3pY-KlRJv_KqL18vY04yH4AZE7KlmsHne7Cc4i0DVna3x777KluYaNZcJ8Npixo3kk3eKNRSO4HnYAbNbjYsH8ws3kQ8uREYi6_elgwXNidIQThAQHNfD8cSUJBjmoulw0nsdWpaQElPObVSTddga2TZq0kVcSjnMmfN_js1gU1bMr56Mrj0Q1jbA7K3qRH02asro_tndoe0j6nEHsxxKfPB1mcDiGCTNblfWjXlsm0XDLbYVn2rNoPVgd9EwgdbagPb8d50cS66yoBAwt5kyqnl1hyGJb9kjHmFqCyYhWyVgMUGCDfSY232TS9tkS5VKcJ8QkRJ9ILuEWMGdO1T8iXMG0U_3cZLJEsYqQ47a0HRK_xPC2PfBNsELGEO-VPuF_-CBLXG61Y0vgxdP-kK_mTgnGheKYQYZnS8tvdfoSNsZ8-aGhg",
 								"type": "text"
 							}
 						],
@@ -837,7 +837,7 @@
 						{
 							"name": "Successful Response",
 							"originalRequest": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -865,15 +865,19 @@
 									}
 								},
 								"url": {
-									"raw": "https://api.getpostman.com/me",
-									"protocol": "https",
+									"raw": "http://127.0.0.1:8000/api/purchase/airtime",
+									"protocol": "http",
 									"host": [
-										"api",
-										"getpostman",
-										"com"
+										"127",
+										"0",
+										"0",
+										"1"
 									],
+									"port": "8000",
 									"path": [
-										"me"
+										"api",
+										"purchase",
+										"airtime"
 									]
 								}
 							},
@@ -897,7 +901,7 @@
 						{
 							"name": "Error Response",
 							"originalRequest": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -925,15 +929,19 @@
 									}
 								},
 								"url": {
-									"raw": "https://api.getpostman.com/me",
-									"protocol": "https",
+									"raw": "http://127.0.0.1:8000/api/purchase/airtime",
+									"protocol": "http",
 									"host": [
-										"api",
-										"getpostman",
-										"com"
+										"127",
+										"0",
+										"0",
+										"1"
 									],
+									"port": "8000",
 									"path": [
-										"me"
+										"api",
+										"purchase",
+										"airtime"
 									]
 								}
 							},
