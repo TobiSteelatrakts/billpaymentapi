@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Rules\Rules\CheckNetworkID;
 use App\Rules\Rules\NumberLength;
-use App\Rules\Rules\StringLength;
 use App\Services\LockService;
 use Illuminate\Http\Request;
 
