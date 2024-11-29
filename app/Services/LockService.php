@@ -46,11 +46,23 @@ class LockService
                     ], 400);
                 }
 
+               
+                try {
+
                 // deduct the amount from the user's balance
                 $user->wallet->balance = ($balance - $request->amount);
                 $user->wallet->save();
 
-                // create a transaction record
+
+                } catch (\Throwable $th) {
+                   
+                    return response()->json([
+                        "message" => "Request failed, please try again"
+                    ], 400);
+                }
+
+
+                // create a transaction record after successfully deduction the amount from the user's wallet
                 $transaction = new Transaction([
                     'id' => $faker->unique()->uuid(),
                     'user_id' => $user->id,
@@ -97,12 +109,26 @@ class LockService
 
             if ($lock->block(2)) {
 
-                // if the lock is acquired  now fund the wallet
-                $user = Auth::user();
-                $balance = $user->wallet->balance;
-                $user->wallet->balance = ($balance + $request->amount);
-                $user->wallet->save();
+               
 
+                try {
+
+                        // if the lock is acquired  now fund the wallet
+                        $user = Auth::user();
+                        $balance = $user->wallet->balance;
+                        $user->wallet->balance = ($balance + $request->amount);
+                        $user->wallet->save();
+        
+            
+    
+                    } catch (\Throwable $th) {
+                       
+                        return response()->json([
+                            "message" => "Request failed, please try again"
+                        ], 400);
+                    }
+
+                    
 
                 // create a transaction record
                 $transaction = new Transaction([
