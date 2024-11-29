@@ -5,7 +5,7 @@
 </p>
 
 ## .
-## Prerequisites
+## prerequisites
 - Please Install VSCode on your device
 
 - Install PHP, composer and Laravel installer on your device (If you dont have them installed, open terminal and run this command below)
@@ -16,24 +16,37 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.3'))
 
 - Install Mamp server on your device for Mac OS or Wamp server  for Windows
+- Install Git on your devive
 - Install Postman on your device
 - Please make sure you are running atleast PHP 8.2 on your device
 
+## .
+=====////////////////////////////////////////////////////////////////=====
+## 
+If you are unable to setup the api locally becuase of some of the above prerequisites, I have deployed it on a live server for testing as well
+
+Here - https://billpaymentapi.peraldefood.com
+
+- To test the live server in Postman just replace http://127.0.0.1:8000 with https://billpaymentapi.peraldefood.com in the  api-docs.json collection you will imported below
+
+E.g.  Change  route from  http://127.0.0.1:8000/api/auth/create  to  https://billpaymentapi.peraldefood.com/api/auth/create 
+
+- Do the same for the remaining endpoints 
 
 
 ## .
 ## How to setup the Bill payment API on your device
 
-Please follow the steps below to setup the Bill payment application on your device
+Please follow the steps below to setup the Bill payment application(API) on your device
 
 -  Open VSCode  then open terminal and paste this code to Clone the repo -   git clone https://github.com/TobiSteelatrakts/billpaymentapi.git
 
 - Or simply download it here https://github.com/TobiSteelatrakts/billpaymentapi.git (click on code and find the download button), unzip it after downloading
 
-- CD into the folder inside VSCode (make sure you are inside the folder that was newly cloned/ downloaded)
+- cd into the folder inside VSCode (make sure you are inside the folder that was newly cloned/ downloaded)
 
 - Type  composer install in the terminal (This would install all the required dependencies)
-- After composer is done,  look for a file called env.example in the cloned/downloaded folder, rename it to env.
+- After composer is done,  look for a file called envexample in the cloned/downloaded folder, rename it to .env
 - Start your Wamp / Mamp server
 - Go back to VSCode terminal and run this command (Just press enter if it ask any question)  -     php artisan migrate
 - Next run this command (press enter if for any question asked)  -     php artisan passport:client --personal 
@@ -41,7 +54,7 @@ Please follow the steps below to setup the Bill payment application on your devi
 
 - You can now start testing the api
 
-- Open Postman and import the api-docs.json collection (find it inside this same project folder that you cloned/downloaded)
+- Open Postman and import the api-docs.json collection (find it inside this same project folder that was cloned/downloaded)
 
 
 
@@ -50,14 +63,14 @@ Please follow the steps below to setup the Bill payment application on your devi
 
 Each api endpoint has a sample request, a success request and a failed request
  
-- After importing the api-docs.json collection you can test the following endpoints
+- After importing the api-docs.json collection you can test the following endpoints as shown in Postman
 
-- User SignUp (Create User): http://127.0.0.1:8000/api/auth/signup         POST request    - (Creates a new user and  a wallet instantly )
-- User Login: http://127.0.0.1:8000/api/auth/login        POST request   -  (After successful login, make sure to use the access_token generated for the remaining requests below) just add Authorization:  Bearer + access_token in the request headers in Postman
-- Wallet Balance :     http://127.0.0.1:8000/api/wallet/balance         GET request
-- Funt Wallet :      http://127.0.0.1:8000/api/wallet/fund         POST request
-- Purchase Airtime (Purchase) :      http://127.0.0.1:8000/api/purchase/airtime         POST request
-- Transactions : http://127.0.0.1:8000/api/transactions           GET request
+- User Create (Create User): http://127.0.0.1:8000/api/auth/create     -    POST request    - (Creates a new user and  a wallet instantly )
+- User Login: http://127.0.0.1:8000/api/auth/login    -    POST request   -  (After successful login(Authentication), make sure to use the access_token generated for the remaining requests below) just add Authorization:  Bearer + access_token in their request headers in Postman
+- Wallet Balance :     http://127.0.0.1:8000/api/wallet/balance      -   GET request  -   (add access_token to headers)
+- Funt Wallet :      http://127.0.0.1:8000/api/wallet/fund      -   POST request    -   (add access_token to headers)
+- Purchase Airtime (Purchase) :      http://127.0.0.1:8000/api/purchase/airtime         POST request -   (add access_token to headers)
+- Transactions : http://127.0.0.1:8000/api/transactions      GET request -   (add access_token to headers)
 
 
 
@@ -97,6 +110,9 @@ I used the feature test since it is more robust
 - Authentication - Used laravel passport to authenticate users and ensure that users have acccess to their own resource only when authenticated
 
 - Unit/ Pest testing - Carried out different test to ensure that the application works as expected , the tests are already described above
+- Github - Pushed codebase to github github for version control and collaboration
+
+- Deployed the API to a live server and tested on postman to see how it compares to the local server setup
 
 
 ## .
@@ -105,10 +121,19 @@ I used the feature test since it is more robust
 - Used Gitignore to prevent pushing sensitive information to Github such as .env file
 - Disabled APP_DEBUG flag in .env to prevent leaking sensitive information in production environment
 - Passowrd hashing to ensure all passwords are not readable as plain text
+- Validation checks to ensure a strong password is created by the user using some built in Laravel validation such as
+min(), letters(), mixedCase(), symbols(), uncompromised() 
+
 - I used laravel hitten attribute in user modal to hide Password in response
 - Used UUID for ID field in the database to enure that IDs are uniqure and also not prone to collisions
 - Used and created custom validation rules to better validate user inputs
 - Implemented a lock service to concurrency attacks
 
+##
+################################
+##
+I look forward to hearing from you 😊
+
+Thank you
 
 
