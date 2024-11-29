@@ -10,6 +10,7 @@ use App\Rules\Rules\StringLength;
 use Hash;
 use Illuminate\Http\Request;
 use Faker\Generator as Faker;
+use Illuminate\Validation\Rules\Password;
 use Laravel\Passport\Token;
 class AuthController extends Controller
 {
@@ -24,7 +25,8 @@ class AuthController extends Controller
             'name' => ['required', 'string', new StringLength(10)], // custom input validation to check name length
             'email' => 'required|string|unique:users',
             'phone_number' => ['required', 'string', 'unique:users', new NumberLength(11)],
-            'password' => 'required|string',
+            'password' => ['required','string' ,Password::min(8)->letters()->mixedCase()->symbols()->uncompromised() // validation check to ensure a strong password
+],
 
         ]);
 

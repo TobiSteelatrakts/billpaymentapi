@@ -105,6 +105,9 @@ I used the feature test since it is more robust
 - Used Gitignore to prevent pushing sensitive information to Github such as .env file
 - Disabled APP_DEBUG flag in .env to prevent leaking sensitive information in production environment
 - Passowrd hashing to ensure all passwords are not readable as plain text
+- Validation checks to ensure a strong password is created by the user using some built in Laravel validation such as
+min(), letters(), mixedCase(), symbols(), uncompromised() 
+ 
 - I used laravel hitten attribute in user modal to hide Password in response
 - Used UUID for ID field in the database to enure that IDs are uniqure and also not prone to collisions
 - Used and created custom validation rules to better validate user inputs
